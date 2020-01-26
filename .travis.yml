@@ -14,7 +14,7 @@ install:
 script:      # 执行的脚步，但是go默认会执行下面的这些命令的，所以可以不用写
 - cd subdir
 # see here: https://docs.travis-ci.com/user/common-build-problems/
-#- travis 30 go test -v -covermode=count -coverprofile=coverage.out -timeout=30m # see here: https://docs.travis-ci.com/user/common-build-problems/
+#- travis_wait 30 go test -v -covermode=count -coverprofile=coverage.out -timeout=30m # see here: https://docs.travis-ci.com/user/common-build-problems/
 #- pwd
 #- $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci
-- travis 30 go test -v 
+- travis_wait 30 go test -v 
